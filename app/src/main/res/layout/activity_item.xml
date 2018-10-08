@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pawel.fridgerator.ItemActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="8dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarNew"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@android:color/darker_gray"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/amountId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/storeId"
+            android:layout_alignStart="@+id/storeId"
+            android:layout_below="@+id/storeId"
+            android:layout_marginTop="41dp"
+            android:text=" AMOUNT : "
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="93dp" />
+
+        <TextView
+            android:id="@+id/priceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbarNew"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="27dp"
+            android:text="PRICE :"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="145dp" />
+
+        <TextView
+            android:id="@+id/storeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/priceId"
+            android:layout_alignStart="@+id/priceId"
+            android:layout_below="@+id/priceId"
+            android:layout_marginTop="34dp"
+            android:text="STORE :"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="200dp" />
+
+        <Button
+            android:id="@+id/buttonPlusId"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editTextId"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/buttonOkId"
+            android:layout_toRightOf="@+id/buttonOkId"
+            android:text="+"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonMinusId"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/amountId"
+            android:layout_alignRight="@+id/amountId"
+            android:layout_below="@+id/amountValueId"
+            android:layout_marginTop="99dp"
+            android:text="-"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/buttonMinusId"
+            android:layout_centerHorizontal="true"
+            android:ems="2"
+            android:inputType="numberDecimal"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/buttonOkId"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonPlusId"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="OK" />
+
+        <TextView
+            android:id="@+id/amountValueId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/amountId"
+            android:layout_alignBottom="@+id/amountId"
+            android:layout_toLeftOf="@+id/buttonOkId"
+            android:layout_toRightOf="@+id/buttonMinusId"
+            android:layout_toStartOf="@+id/buttonOkId"
+            android:text="0"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
